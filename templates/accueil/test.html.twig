@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('CSS/style.css') }}">
+    <title>Village Green, des musiciens au service des musiciens</title>
+</head>
+<body>
+
+<div class="main-container container justify-content-between p-0"> <!-- Ouverture du container principal -->
+    <div class="row g-0 d-flex justify-content-between ">
+        <nav class="navbar navbar-expand-lg container-fluid p-0">
+            <!-- <div class="container-fluid navbar navbar-expand p-0"> -->
+            <div class="row container-fluid p-0 m-0 ">
+                <div id="navlogo" class="p-0">
+                    <!-- <a class="navbar-brand" href="<?php echo site_url('Produits/accueil');?>"> -->
+                    <img id="logo" src="{{ asset('Charte/HEADER/logo village green.png') }}" alt="Logo Village Green" title="Logo Village Green">
+                    <!-- </a> -->
+                </div>
+
+                <div id="navbar" class="p-0">
+
+                    <div class="row m-0" id="nav-first-row">
+                        <div class="container navbar d-flex justify-content-end p-0" id="nav-first-row-div">
+                            <a class="nav-link" href="#">Infos</a>
+                            <a class="nav-link" href="#">Espace Client</a>
+                            <a class="nav-link" href="#">
+                                <img class="img-fluid" src="{{ asset('Charte/HEADER/picto panier.png') }}" alt="pictogramme panier d'achat" title="Votre panier">
+                            </a>
+                            <a class="nav-link" href="#">
+                                <img src="{{ asset('Charte/HEADER/picto pays.png') }}" alt="pictogramme pays" title="Langue de navigation">
+                            </a>
+                            <a class="nav-link" href="<?php echo site_url('Admin/login');?>">
+                                <img src="<?php echo base_url('assets/images/icons/lock.svg');?> " alt="pictogramme cadenas" title="Espace réservé aux administrateurs" width="26" >
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row m-0" id="nav-second-row">
+                        <div class="container navbar p-1">
+                            <a class="nav-link fw-bold py-1" href="#">Produits</a>
+                            <a class="nav-link fw-bold py-1" href="#">Services</a>
+                            <a class="nav-link fw-bold py-1" href="#">Aide</a>
+                            <a class="nav-link fw-bold py-1" href="#">A Propos</a>
+                        </div>
+                    </div>
+
+                    <div class="row m-0" id="nav-third-row">
+                        <div class="container navbar d-flex justify-content-end p-1">
+                            <div id="nav-third-row-item-guitar">
+                                <a id="item-guitar" class="nav-link pr-1 px-3 me-2" href="#">Guit/Bass</a>
+                                <div id="item-guitar-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="">Guitares Electriques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Guitares Classiques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="">Guitares Acoustiques<br>& Electro-acoustiques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="">Basses Electriques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Basses Acoustiques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Basses Semi-Acoustiques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Ukulélés</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Autres instruments à cordes pincées</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-drums">
+                                <a id="item-drums" class="nav-link pr-1 px-3 me-2" href="#">Batteries</a>
+                                <div id="item-drums-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">Batteries Electriques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Batteries Acoustiques</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-keyboard">
+                                <a id="item-keyboard" class="nav-link pr-1 px-3 me-2" href="#">Claviers</a>
+                                <div id="item-keyboard-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">Claviers Arrangeurs</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Claviers Maîtres</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Pianos Numériques</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-studio">
+                                <a id="item-studio" class="nav-link pr-1 px-3 me-2" href="#">Studio</a>
+                                <div id="item-studio-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">Enceintes de monitoring</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Microphones</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Interfaces Audio</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Logiciels Studio</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Mobilier de studio</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-sono">
+                                <a id="item-sono" class="nav-link pr-1 px-3 me-2" href="#">Sono</a>
+                                <div id="item-sono-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">Amplis de puissance</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Enceintes Actives</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Microphones</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Préamplificateurs Studio</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Packs enceintes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-lights">
+                                <a id="item-lights" class="nav-link pr-1 px-3 me-2" href="#">Eclairages</a>
+                                <div id="item-lights-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">Kits et packs lumières</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Lasers</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Lumière Noire</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Machines et liquides</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Projecteurs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-dj">
+                                <a id="item-dj" class="nav-link pr-1 px-3 me-2" href="#">DJ</a>
+                                <div id="item-dj-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">Casques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Effets DJ</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Mixers Numériques</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Platines vinyles</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Tables de mixage</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-cases">
+                                <a id="item-cases" class="nav-link pr-1 px-3 me-2" href="#">Cases</a>
+                                <div id="item-cases-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">DJ</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Elements rackables</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">flight case pour lumières</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Sono</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Pièces détachées</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="nav-third-row-item-accessories">
+                                <a id="item-accessories" class="nav-link pr-1 px-3 me-2" href="#">Accessoires</a>
+                                <div id="item-accessories-submenu">
+                                    <ul>
+                                        <li><a class="nav-link px-1 py-1" href="#">Accessoires claviers</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Accessoires guitares</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Accessoires DJ, sono<br>& Home studio</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Accessoires claviers</a></li>
+                                        <li><a class="nav-link px-1 py-1" href="#">Mobilier d'orchestre</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </nav>
+    </div>
+<header id="banner" class="d-flex justify-content-evenly">
+    <div id="banner-gibson">
+        <img class="img-fluid" src="{{ asset('Charte/BODY/pub guitare.png') }}" alt="Remise jusqu'à 15% sur Gibson et Ibanez" title="Remise jusqu'à 15% sur Gibson et Ibanez">
+        <img id="banner-gibson-button" class="img-fluid" src="{{ asset('Charte/BODY/pub guitare bouton blanc.png') }}" alt="bouton en savoir plus" title="En savoir plus">
+
+
+    </div>
+    <div id="banner-delivery">
+        <img class="img-fluid d-none d-lg-block" src="{{ asset('Charte/BODY/banniere droite prix.png') }}" alt="image livraison gratuite à partir de 19€ d'achats" title="Livraison gratuite à partir de 19€ d'achats">
+    </div>
+</header>
+
+<!-- Bannière services -->
+<section id="banner-services">
+    <img class="img-fluid w-100 pt-5 pb-2" src="{{ asset('Charte/BODY/banniere centre 4 pictos.png') }}" alt="Livraison gratuite à parti de 19€ d'achats" title="Remise jusqu'à 15% sur Gibson et Ibanez">
+</section>
+
+<!-- Raccourcis catégories -->
+<section id="categories">
+    <header id="header-categories">
+        <h1>Nos Catégories</h1>
+    </header>
+
+    <!-- 1ère ligne -->
+    <div class="d-flex flex-row justify-content-center">
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES guitare.png') }}" alt="photo de la catégorie guitare" title="catégorie guitare">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER guitare.png') }}" alt="photo de la catégorie guitare" title="catégorie guitare">
+        </div>
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES batterie.png') }}" alt="photo de la catégorie batterie" title="catégorie batterie">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER batterie.png') }}" alt="photo de la catégorie batterie" title="catégorie batterie">
+
+        </div>
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES piano.png') }}" alt="photo de la catégorie piano" title="catégorie piano">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER piano.png') }}" alt="photo de la catégorie piano" title="catégorie piano">
+        </div>
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES micro.png') }}" alt="photo de la catégorie micro" title="catégorie micro">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER micro.png') }}" alt="photo de la catégorie micro" title="catégorie micro">
+        </div>
+    </div>
+
+    <!-- 2eme ligne -->
+    <div id="categories-sec-line" class="d-flex flex-row bg-white">
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES sono.png') }}" alt="photo de la catégorie sono" title="catégorie sono">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER sono.png') }}" alt="photo de la catégorie sono" title="catégorie sono">
+        </div>
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES cases.png') }}" alt="photo de la catégorie cases" title="catégorie cases">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER cases.png') }}" alt="photo de la catégorie cases" title="catégorie cases">
+        </div>
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES cable.png') }}" alt="photo de la catégorie cable" title="catégorie cable">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER access.png') }}" alt="photo de la catégorie cable" title="catégorie cable">
+
+        </div>
+        <div class="item-categories">
+            <img class=" img-fluid" src="{{ asset('Charte/BODY/CATEGORIES saxo.png') }}" alt="photo de la catégorie saxo" title="catégorie saxo">
+            <img class=" img-fluid rollover" src="{{ asset('Charte/BODY/CATEGORIES ROLL OVER saxo.png') }}" alt="photo de la catégorie saxo" title="catégorie saxo">
+
+        </div>
+    </div>
+
+</section>
+
+<!-- Best sellers & partners -->
+<section class="row">
+
+    <!-- Best Sellers -->
+    <div id="best-sellers-partners">
+        <section id="best-sellers" class="d-flex flex-column">
+            <header>
+                <h1>Nos meilleures ventes</h1>
+            </header>
+
+            <div id="group-items-categories" class="d-flex flex-row justify-content-center px-3">
+                <div class="item-categories bg-transparent">
+                    <img class=" img-fluid px-1" src="{{ asset('Charte/BODY/TOP VENTES guitare.png') }}" alt="photo de la catégorie TOP VENTES guitare" title="TOP VENTES guitare">
+                    <img class=" img-fluid px-1 rollover" src="{{ asset('Charte/BODY/TOP VENTES ROLL OVER guitare.png') }}" alt="photo de la catégorie TOP VENTES guitare" title="TOP VENTES guitare">
+                </div>
+                <div class="item-categories bg-transparent">
+                    <img class=" img-fluid px-1" src="{{ asset('Charte/BODY/TOP VENTES saxo.png') }}" alt="photo de la catégorie TOP VENTES saxo" title="TOP VENTES saxo">
+                    <img class=" img-fluid px-1 rollover" src="{{ asset('Charte/BODY/TOP VENTES ROLL OVER saxo.png') }}" alt="photo de la catégorie TOP VENTES saxo" title="TOP VENTES saxo">
+                </div>
+                <div class="item-categories bg-transparent">
+                    <img class=" img-fluid px-1" src="{{ asset('Charte/BODY/TOP VENTES piano.png') }}" alt="photo de la catégorie TOP VENTES piano" title="TOP VENTES piano">
+                    <img class=" img-fluid px-1 rollover" src="{{ asset('Charte/BODY/TOP VENTES ROLL OVER piano.png') }}" alt="photo de la catégorie TOP VENTES piano" title="TOP VENTES piano">
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners -->
+        <section id="partners" class="d-flex flex-column px-3">
+            <header>
+                <h1>Nos partenaires</h1>
+            </header>
+
+            <div class="d-flex flex-row">
+                <div>
+                    <img class=" img-fluid" src="{{ asset('Charte/BODY/partenaires 4 logos.png') }}" alt="Logos partenaires Roland, Sennheiser, Yamaha, Behringer" title="Nos partenaires">
+                </div>
+            </div>
+        </section>
+
+    </div>
+</section>
+
+</section>
+    <footer>
+        <div >
+            <img class="img-fluid w-110 pt-5 pb-2" src="{{ asset('Charte/FOOTER/footer SIMPLE.png') }}" alt="footer">
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
