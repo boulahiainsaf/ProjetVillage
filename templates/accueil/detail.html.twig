@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <article>
+        <div class="row m-0 justify-content-center align-items-stretch bg-white">
+            <!-- Box visuel produit -->
+            <div id="product-image" class="col-12 col-md-6 py-2 overflow-hidden">
+                <img class="img-fluid zoom" src="{{ asset('Charte/produit/'~ produit.id ~'.'~ produit.proPhoto) }} " title="{{produit.proLibCourt}}">
+            </div>
+            <!-- Box disponibilité -->
+            <div id="product-stat" class="col-12 col-md-6">
+                <div class="details-header">
+                    <span>REF: {{produit.proFouRef}}</span>
+                    <h4>
+                        {{ produit.proLibCourt }}
+                    </h4>
+                </div>
+                <div class="details-body row flex-wrap m-0">
+                    <div class="col-12 col-md-6">
+                        <div class="details-stat col-12">
+                            <p class="label"><b>DISPONIBILITE :</b></p>
+                            <p><img src="{{ asset('C') }}"alt="logo coche verte">
+                                </p>
+                        </div>
+                        <div class="col-12">
+                            <p class="label"><b>LIVRAISON :</b></p>
+                            <p>Livraison standard : gratuite</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="label"><b>GARANTIE :</b></p>
+                            <p>Produit garanti 3 ans.</p>
+                        </div>
+
+                    </div>
+                    <!-- Box prix -->
+                    <div class="details-price col-12 col-md-6 d-flex flex-column-reverse flex-md-column">
+
+                        <!-- Bouton 'Ajouter au panier' -->
+
+                        <!-- champs invisible fournissant les infos nécessaire au panier -->
+                        <input type="hidden" name="pro_qty" id="pro_qty" value="1">
+                        <input type="hidden" name="pro_spet" id="pro_spet" value="<?= $product[0]->pro_spet ?>">
+                        <input type="hidden" name="pro_ppet" id="pro_ppet" value="<?= $product[0]->pro_ppet ?>">
+                        <input type="hidden" name="pro_id" id="pro_id" value="<?= $product[0]->pro_id ?>">
+                        <input type="hidden" name="pro_label" id="pro_label" value="<?= $product[0]->pro_label ?>">
+                        <input type="hidden" name="pro_phy_stk" id="pro_phy_stk" value="<?= $product[0]->pro_phy_stk ?>">
+                        <input type="hidden" name="pro_photo" id="pro_photo" value="<?= $product[0]->pro_photo ?>">
+                        <input type="hidden" name="cus_type" id="cus_type" value="<?= $customer[0]->cus_type ?>">
+                        <input type="hidden" name="cus_coef" id="cus_coef" value="<?= $customer[0]->cus_coef ?>">
+
+                        <!-- Bouton -->
+                        <button type="submit">Ajouter au Panier</button>
+
+                        <div>
+                            <p class="label"><b>VOTRE PRIX :</b></p>
+                            <p class="your-price">{{ produit.proPriAchat }} € <span class="fs-5">TTC</span></p>
+
+                            <p>Se connecter / <a class="text-white" href="#">S'inscrire</a> </p>
+                            <?php
+                                    }
+                                ?>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Box descriptif produit -->
+                <div class="product-desc">
+                    <h4>
+                        Descriptif du produit :
+                    </h4>
+                    <p>
+                        {{ produit.proLibLong }}
+                    </p>
+                    <p>
+                        En catalogue depuis le {{ produit.proDateAjou | date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+{% endblock %}
+
+{% block title %}
+{{ parent() }}|detail
+{% endblock %}
+
