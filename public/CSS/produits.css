@@ -1,0 +1,27 @@
+.cadre{
+    border: 2px solid #68BAB7;
+    width: 300px;
+    margin: 20px;
+}
+.produitI{
+    padding-top: 10px;
+    height: 200px;
+}
+.produit{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.detail{
+    text-align: end;
+}
+.detail a{
+    text-decoration: none;
+    font-size: x-large;
+    color: #074947;
+    text-shadow: 0 8px 20px #999999;
+}
+.prix{
+    font-size: xx-large;
+    font-weight: lighter;
+}

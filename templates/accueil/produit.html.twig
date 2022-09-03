@@ -1,4 +1,7 @@
 {% extends 'base.html.twig' %}
+ {% block stylesheets %}
+     <link rel="stylesheet" href="{{ asset('CSS/produits.css') }}">
+ {% endblock %}
 
 {% block body %}
 {#
@@ -14,11 +17,31 @@
         </div>
     </div>
 </div>#}
-    <article id="products-list" class="row m-0 px-0 px-lg-5 mb-4">
-
+    {# <article id="products-list" class="row m-0 px-0 px-lg-5 mb-4">#}
+    <div>
+        <h1>Nos produits : </h1>
+        <div>
+            <h4> classer par categorie </h4>
+        </div>
+    </div>
+    <div class="produit container-fluid">
+            <div class="row">
         {% for prt in Produits %}
+            <div class="cadre">
+                <img class="produitI" src="{{ asset('Charte/produit/'~ prt.id ~'.'~prt.proPhoto) }}" width="200px">
+                <h3>{{ prt.proLibCourt }}</h3>
+                {% if user  %}
+                <p>{{ prt.proPriAchat * user.getcliCoefficient }}</p>
+                {% else %}
+                    <p class="prix">{{ prt.proPriAchat*2 }} €</p>
+                {% endif %}
+                <div class="detail">
+                    <a href="{{ path('app_detail',{'id':prt.id}) }}">Détail</a>
+                </div>
 
-        <div class="card col-12 col-sm-6 col-md-4 px-0 overflow-hidden">
+            </div>
+
+      {#  <div class="card col-12 col-sm-6 col-md-4 px-0 overflow-hidden">
             <div class="d-flex justify-content-center py-2 overflow-hidden <?php if(isset($row->cat_id) && $row->cat_id === '11'){echo 'rockin-left';}else{echo 'rockin-right';}?>">
                 <a href="#">
                 <img class="card-img-top img-fluid" src="{{ asset('Charte/produit/'~ prt.id ~'.'~prt.proPhoto) }} " alt="photo du produit <?php echo $row->pro_label; ?>" title="<?php echo $row->pro_label; ?>">
@@ -36,7 +59,7 @@
                     </svg>
                 </button>
                 <?php
-                        }
+                        #
                     ?>
                 <div class="d-flex flex-column justify-content-start">
                     <h5 class="card-title">{{prt.proLibCourt}}</h5>
@@ -53,9 +76,10 @@
                     <a class="btn btn-primary" href="{{ path('app_detail', {'id':prt.id}) }}">Détails</a>
                 </div>
             </div>
-        </div>
+        </div>#}
         {% endfor %}
-    </article>
+            </div>
+    </div>
 
 
 {% endblock %}

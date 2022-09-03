@@ -16,8 +16,11 @@ class ProduitController extends AbstractController
     public function produit(ProduitsRepository   $produitsRepository): Response
     {
         $produits = $produitsRepository->findAll();
+        $user = $this->getUser();
+        dump($user);
         return $this->render('accueil/produit.html.twig', [
-            "Produits" => $produits
+            "Produits" => $produits,
+            "user"=>$user
         ]);
     }
     /**
@@ -27,9 +30,11 @@ class ProduitController extends AbstractController
 
                               ProduitsRepository $produitsRepository)
     {
+
         $produit = $produitsRepository->find($id);
         return $this->render('accueil/detail.html.twig', [
-            "produit" => $produit
+            "produit" => $produit,
+
         ]);
 
     }
