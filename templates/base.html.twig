@@ -25,7 +25,7 @@
                 <ul class="col-10" >
                     <li ><a id="p1" href="#" >{% trans %}Accueil{% endtrans %}</a></li>
                     <li id="ul1" class="p1"><a id="p2" href="{{ path('app_produit')  }}" >{% trans %}Nos produits{% endtrans %} </a></li>
-                    <li id="ul2" class="p1"> <a id="p3" href="#" >{% trans %} Connexion{% endtrans %} </a></li>
+                    <li id="ul2" class="p1"> <a id="p3" href="{% if app.user.userIdentifier is defined%}{{ path('app_logout') }}{% else %}{{ path('app_login') }}{% endif %}" >{% if app.user.userIdentifier is defined%} {{ app.user.cliNom }}{% else %}{% trans %}Connexion{% endtrans %}{% endif%} </a></li>
                     <li id="ul3" class="p1"><a id="p4" href="#" >{% trans %}FR {% endtrans %}</a></li>
 
                 </ul>

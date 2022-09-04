@@ -60,7 +60,7 @@ class Fournisseurs
     private $fouContactPhone;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $fouType;
 
@@ -175,7 +175,7 @@ class Fournisseurs
         return $this;
     }
 
-    public function getFouType(): ?int
+    public function getFouType(): ?string
     {
         return $this->fouType;
     }

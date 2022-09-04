@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Boolean;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -25,9 +26,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="boolean")
      */
-    private $roles = [];
+    private $administrateur ;
 
     /**
      * @var string The hashed password
@@ -118,21 +119,27 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @see UserInterface
      */
-    public function getRoles(): array
+    public function getAdministrateur(): ?string
     {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
+        return $this->administrateur;
     }
 
-    public function setRoles(array $roles): self
+    public function setAdministrateur(string $administrateur): self
     {
-        $this->roles = $roles;
+        $this->administrateur = $administrateur;
 
         return $this;
     }
+    public function getRoles(): array
+    {
+        // TODO si admin  =  true -> return ROLE_ADMIN dans un tableau
+        // $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        //$roles[] = 'ROLE_USER';
+        return $this->administrateur?['ROLE_ADMIN']:['ROLE_USER'];
+        //return array_unique($roles);
+    }
+
 
     /**
      * @see PasswordAuthenticatedUserInterface

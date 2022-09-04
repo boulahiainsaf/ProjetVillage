@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+ {% block stylesheets %}
+     <link rel="stylesheet" href="{{ asset('CSS/login.css') }}">
+ {% endblock %}
+{% block body %}
+    <div class="test">
+
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.cliPhone) }}
+        {{ form_row(registrationForm.cliNom) }}
+        {{ form_row(registrationForm.cliPrenom) }}
+        {{ form_row(registrationForm.password) }}
+        {{ form_row(registrationForm.cliAdresse) }}
+        {{ form_row(registrationForm.cilCp) }}
+        {{ form_row(registrationForm.cliType) }}
+
+
+        <div class="blockBo">
+            <button type="submit" class="btn">Nous rejoindre</button>
+        </div>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

@@ -1,0 +1,55 @@
+span{
+    color: red;
+    font-size: xx-large;
+}
+
+.produit{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.cadre{
+    box-shadow: 0 8px 20px #B9B9B9;
+    width: auto;
+    margin: 20px;
+    padding: 50px;
+    border-radius: 20px;
+}
+h3{
+    text-decoration: none;
+    font-size: xx-large;
+    color: #68BAB7;
+    text-shadow: 0 8px 20px #999999;
+
+}
+.button{
+
+    width: auto;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #D9D9D9;
+    margin-bottom: 10px;
+    padding: 10px 0;
+
+
+
+}
+.button a, .button2 a{
+    text-decoration: none;
+    color: #074947;
+    font-weight: bold;
+
+
+}
+.button2{
+    width: auto;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 190px;
+    background-color: #D9D9D9;
+    margin-bottom: 10px;
+    color: #074947;
+    font-weight: bold;
+    padding: 10px 0;
+
+}

@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/detail.css') }}">
+{% endblock %}
 {% block body %}
-    <article>
+    {# article>
         <div class="row m-0 justify-content-center align-items-stretch bg-white">
             <!-- Box visuel produit -->
             <div id="product-image" class="col-12 col-md-6 py-2 overflow-hidden">
@@ -78,7 +80,37 @@
                 </div>
             </div>
         </div>
-    </article>
+    </article>#}
+    <div class="produit container-fluid">
+        <div class="row">
+            <div class="cadre">
+                <img class="produitI" src="{{ asset('Charte/produit/'~ produit.id ~'.'~produit.proPhoto) }}" width="400px">
+                {% if  produit.proBloque != 1  %}
+                <div class="button">
+                    <a href="#" >Ajouter au panier</a>
+
+                </div>
+                {% endif %}
+            </div>
+            <div class="cadre">
+                <h3>Prix : </h3>
+                <p>{{ produit.proPriAchat }} €</p>
+                <h3>Discription :</h3>
+                <p>{{ produit.proLibLong }}</p>
+                {% if  produit.proBloque != 1  %}
+                <h3>Produits Disponible </h3>
+                {% else %}
+                <span>Produits indisponible</span>
+                {% endif %}
+                <div class="button2">
+                    <a href="{{ path('app_produit') }}" >Retour</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}
 

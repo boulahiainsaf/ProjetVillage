@@ -1,10 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Log in!{% endblock %}
+ {% block stylesheets %}
+     <link rel="stylesheet" href="{{ asset('CSS/login.css') }}">
+ {% endblock %}
 
 {% block body %}
     <div class=" test ">
-        <form method="post">
+        <form method="post" action="{{ path('app_login') }}">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
@@ -15,9 +18,9 @@
                 </div>
             {% endif %}
 
-            <h1 class="h3 mb-3 font-weight-normal">DÉJÀ INSCRIT ? CONNECTEZ-VOUS !</h1>
 
-            <label for="inputEmail">Votre e-mail :</label>
+
+            <label for="inputEmail">Identifiant :</label>
             <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
             <label for="inputPassword">Votre mot de passe : </label>
             <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
@@ -41,11 +44,14 @@
                     <input type="checkbox" name="_remember_me"> Remember me
                 </label>
             </div>
+    <div class="blockBo">
+        <button class="btn " type="submit">
+            Se connecter
+        </button><br>
 
-            <button class="btn " type="submit">
-                Sign in
-            </button><br>
-            <a class=" inscription" href="#">PAS ENCORE DE COMPTE ? INSCRIVEZ-VOUS !</a>
+        <p>PAS ENCORE DE COMPTE ? <a class=" inscription" href="{{ path('app_inscription') }}">INSCRIVEZ-VOUS !</a></p>
+
+    </div>
 
         </form>
 
